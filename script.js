@@ -15,10 +15,8 @@ function computerPlay() {
 }
 
 function playerPlay() {
-    playerOption = prompt('Type \'rock\', \'paper\', or \'scissors\' to choose: ').toLowerCase()
-    if (playerOption !== 'rock' || playerOption !== 'paper' || playerOption !== 'scissors') {
-        return playerOption
-    } 
+    playerOption = prompt('Type \'rock\', \'paper\', or \'scissors\' to choose: ').toLowerCase() 
+    return playerOption
 }
 
 function playRound() {
@@ -54,11 +52,9 @@ function playRound() {
 }
 
 function game () {
-    console.log(playRound())
-    console.log(playRound())
-    console.log(playRound())
-    console.log(playRound())
-    console.log(playRound())
+    for (let i = 0; i < 5; i ++) {
+        console.log(playRound())
+    }
     if (playerScore > computerScore) {
         console.log('VICTORY! \nthe score was: ' + playerScore + ' (You)' + ' to ' + computerScore + ' (Computer)')
     } else if (computerScore > playerScore) {
