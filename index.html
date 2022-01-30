@@ -4,17 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <style>
+    body {
+        font-family: 'Roboto', arial;
+    }  
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
     h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        margin: 0;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        gap: 50px;
+        height: 200px;
+    }
+
+    .results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        gap: 50px;
+    }
+
+    .logs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .playerScore,
+    .computerScore {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 </style>
 <body>
-    <h1>ROCK PAPER SCISSORS GAME</h1>
+    <div class = 'container'>
+    <h1>Rock Paper Scissors</h1>
+    <div class = 'images'>
+        <img src = 'https://2.bp.blogspot.com/-VhlO-Yfjy_E/Uab3z3RNJQI/AAAAAAAAUVg/fX8VnSVDlWs/s220/janken_gu.png' class = 'clickable rock' alt = 'Rock'>
+        <img src = 'https://3.bp.blogspot.com/-qZtyoue9xKs/Uab30IG0Q5I/AAAAAAAAUVk/qnH8a2OgrvI/s290/janken_pa.png' class = 'clickable paper' alt = 'Paper'>
+        <img src = 'https://4.bp.blogspot.com/-__yEIXe5SxU/Uab3zO7BB2I/AAAAAAAAUVI/MYg6TVeiv-Y/s270/janken_choki.png' class = 'clickable scissors' alt = 'Scissors'>
+    </div>
+    <div class = 'results'>
+            <div class = 'playerSide'>
+                <h3>Player Score</h3>
+                <h4 class = 'playerScore'>0</h4>
+            </div>
+            <h2>Output</h2>
+            <div class = 'computerSide'>
+                <h3>Computer Score</h3>
+                <h4 class = 'computerScore'>0</h4>
+            </div>
+    </div>
+
+    <div class = 'logs'>
+        Results will be displayed here
+    </div>
 </body>
 </html>
+<script src="script.js" defer></script>
